@@ -1,0 +1,66 @@
+
+/* @font-face {
+    font-family: 'fonty';
+    src: url(~src\assets\arbootstrap\fonts\NeoSansArabicBold.ttf);
+}
+
+@font-face {
+    font-family: 'btn';
+    src: url(~src\assets\arbootstrap\fonts\HacenTunisia_1.ttf);
+}
+
+ */
+.masthead {
+    height: 90vh;
+    min-height: 500px;
+    background-image: url('~src\assets\pexels-photo-1112048.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.col-12.text-center {
+    color: white;
+    font-family: neosans
+}
+
+.lead{
+    font-family: hacen;
+    font-size: 1.5em
+}
+
+
+
+
+.btn{
+    font-family: hacen;
+    border-radius: 7px;
+    width: 180px
+}
+
+.btn-dark{
+    background-color: rgb(44, 44, 44);
+    border: 1px solid rgb(44, 44, 44)
+}
+.btn-dark:hover{
+    background-color: rgb(88, 11, 11);
+    border-color: rgb(88, 11, 11);
+}
+
+
+
+@media(max-width: 596px){
+    h1{
+        font-size: 1.9em
+    }
+    p.lead{
+        font-size: 1.3em
+    }
+    a.btn{
+        width: 7em;
+    }
+}
+
+
+
+

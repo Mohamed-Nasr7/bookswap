@@ -1,0 +1,84 @@
+section{
+    
+    background-image: url('~src\assets\bookbg.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+section{
+    min-height: 80vh
+}
+
+
+
+.main{
+    border-radius: 10px;
+    background-color: rgba(240, 240, 240, 0.514);
+    padding: 20px;
+    font-family: sans
+}
+
+.rowfst{
+
+    margin: 0;
+    padding: 0
+}
+
+.rowfst h3{
+    font-family: neosans
+}
+.jumbotron{
+    background-color: rgba(255, 242, 228, 0.747);
+    padding: 20px;
+    border-radius: 7px;
+    position: relative
+}
+.jumbotron input{
+    border-radius: 50px
+}
+
+.jumbotron:hover input{
+    border: 1px solid rgb(170, 166, 162);
+}
+
+.jumbotron:hover{
+    background-color: rgba(255, 242, 228, 0.747);
+}
+
+.row{
+    margin: 20px auto;
+    
+}
+
+button[data-toggle="modal"]{
+    background-color: rgb(148, 64, 64);
+    border: 0
+}
+
+button[data-toggle="modal"]:active:focus{
+    background-color: rgb(100, 62, 62);
+    border: 0
+}
+
+
+
+
+/* Search icon */
+
+.jumbotron input{
+    padding-right: 2.375rem;
+}
+
+.jumbotron .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    line-height: 2.375rem;
+    text-align: inherit;
+    pointer-events: none;
+    color: #aaa;
+    right: 33px;
+}

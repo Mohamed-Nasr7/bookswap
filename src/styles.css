@@ -1,0 +1,23 @@
+
+@import '~assets\bootstrap\css\bootstrap-rtl.css';
+@import '~assets\bootstrap\css\bootstrap\bootstrap.css';
+@import '~assets\bootstrap\css\bootstrap\font-awesome.css';
+
+
+@font-face {
+    font-family: 'neosans';
+    src: url(~src\assets\bootstrap\fonts\NeoSansArabicBold.ttf);
+}
+
+@font-face {
+    font-family: 'hacen';
+    src: url(~src\assets\bootstrap\fonts\HacenTunisia_1.ttf);
+}
+
+
+@font-face {
+    font-family: 'sans';
+    src: url(~src\assets\bootstrap\fonts\NeoSansArabic.ttf);
+}
+
+

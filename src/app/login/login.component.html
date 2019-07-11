@@ -1,0 +1,39 @@
+
+<div class="container login-container">
+            <div class="row">
+
+                <!-- USER LOGIN -->
+                <div class="col-md-6 login-form-1">
+                    <h3>سجل الدخول كمستخدم</h3>
+                    <form [formGroup]="form">
+                        <div class="form-group">
+                            <input type="text" formControlName="userName" class="form-control" placeholder="البريد الإلكتروني" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" formControlName="password" class="form-control" placeholder="الرقم السري" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" [disabled]="!form.valid" (click)="login()" class="btnSubmit" value="سجل" />
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- ADMIN LOGIN -->
+                <div class="col-md-6 login-form-2">
+                    <h3>سجل الدخول كمشرف</h3>
+                    <form [formGroup]="adminForm">
+                        <div class="form-group">
+                            <input type="text" formControlName="adminName" class="form-control" placeholder="البريد الإلكتروني" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" formControlName="adminPass" class="form-control" placeholder="الرقم السري" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" [disabled]="!adminForm.valid" (click)="adminLogin()" class="btnSubmit" value="سجل" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+

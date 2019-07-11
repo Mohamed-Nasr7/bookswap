@@ -1,0 +1,99 @@
+<div class="header">
+  <div class="container-fluid header-img">
+    <h1>انضم إلينا</h1>
+  </div>
+</div>
+    <section class="myform container-fluid">
+        <section class="container">
+            <h2>ليس لديك حساب ؟ سجل الآن</h2>
+            <hr />
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="fullname">الأسم كاملا</label>
+                    <input type="text" class="form-control" formControlName="fullname" placeholder="ادخل الأسم" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }">
+                    <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                        <div *ngIf="f.fullname.errors.required">FullName is required</div>
+                    </div>
+                  </div>
+                
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني </label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="ادخل البريد الإلكتروني" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+
+                  </div>
+                <div class="form-group">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="ادخل كلمة المرور" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+
+                  </div>
+                <div class="form-group">
+                    <label for="confirmpassword">تأكيد كلمة المرور </label>
+                    <input type="password" class="form-control" formControlName="confirmPassword" placeholder=" تأكيد كلمة المرور" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                        <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="text" class="form-control" formControlName="phone" placeholder="ادخل رقم الهاتف"  [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                        <div *ngIf="f.phone.errors.required">Phone is required</div>
+                        <div *ngIf="f.phone.errors.minlength">Sorry min length is 6</div>
+                        <div *ngIf="f.phone.errors.maxlength">Sorry max length is 14</div>
+                        <div *ngIf="f.phone.errors.pattern">phone must be numbers</div>
+
+
+
+                    </div>
+                  </div>
+
+                
+                
+                <div class="form-group">
+                    <label for="government">المحافظة</label>
+                    <select class="form-control" formControlName="government" [ngClass]="{ 'is-invalid': submitted && f.government.errors }">
+                        <option>ادخل المحافظة</option>  
+                    </select>
+                    <div *ngIf="submitted && f.government.errors" class="invalid-feedback">
+                        <div *ngIf="f.government.errors.required">Government is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">المدينة</label>
+                    <select class="form-control" formControlName="city" [ngClass]="{ 'is-invalid': submitted && f.city.errors }">
+                        <option>ادخل مدينتك</option>  
+                    </select>
+                    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                        <div *ngIf="f.city.errors.required">City is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adress">اسم الشارع</label>
+                    <input type="text" class="form-control" formControlName="street" placeholder="ادخل اسم الشارع " [ngClass]="{ 'is-invalid': submitted && f.street.errors }">
+                    <div *ngIf="submitted && f.street.errors" class="invalid-feedback">
+                        <div *ngIf="f.street.errors.required">Street is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="zip">الرمز البريدي</label>
+                    <input type="text" class="form-control" formControlName="zip" placeholder="ادخل الرمز البريدي" [ngClass]="{ 'is-invalid': submitted && f.zip.errors }">
+                    <div *ngIf="submitted && f.zip.errors" class="invalid-feedback">
+                        <div *ngIf="f.zip.errors.required">ZIP is required</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">انضم إلينا</button>
+            </form>
+        </section>
+    </section>

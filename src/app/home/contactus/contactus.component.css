@@ -1,0 +1,116 @@
+
+
+.contactus{
+    
+    padding: 5% 0;
+    background: url(~src\assets\photo-1465667226977-fadb849f7fa3.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    /* overflow: hidden; */
+    margin-bottom: 5%;
+    min-height: 500px;
+
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+    min-height: 500px;
+    position: relative;
+}
+
+.myform{
+    background-color: rgba(230, 230, 230, 0.479);
+    border-radius: 8px;
+    padding: 20% auto;
+    width: 75%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: hacen;
+}
+
+.form-group{
+    margin: 0 auto
+}
+
+.form-row{
+    padding: 0 calc(100% / 6);
+}
+
+
+h2{
+    font-family: neosans;
+    margin: 40px auto
+}
+
+label{
+    font-family: hacen;
+    font-size: 1.2em
+}
+
+.form-row label{
+    margin-right: 5%
+}
+
+input{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+textarea{
+    height: 180px;
+}
+
+
+button{
+    display: block;
+    margin: 3% auto;
+    width: 20%;
+    border: 2px solid;
+    border-radius: 0;
+    padding: 12px auto;
+    font-family: hacen;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center
+}
+
+
+
+
+/* MEDIA */
+
+@media (max-width: 970px){
+    .myform{
+        height: 100%;
+    }
+    textarea{
+        height: 100px
+    }
+
+    h2.text-center{
+        font-size: 1.6em;
+        margin: 3%;
+    }
+    label{
+        font-size: 1.1em;
+        margin-top: 10px;
+
+    }
+
+    button{
+        
+        min-width: 2em;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: auto;
+        font-family: hacen;
+        font-size: 1em;
+    }
+    
+}

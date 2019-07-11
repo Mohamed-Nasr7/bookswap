@@ -1,0 +1,70 @@
+
+
+section{
+  min-height: 82vh;
+  font-family: neosans
+}
+
+.nav-pills > li + li {
+  margin: 0
+}
+
+.container-fluid{
+  padding: 2% 4% 0;
+  min-height: 70vh;
+
+}
+
+
+nav.navbar.navbar-expand-lg {
+
+  padding-left:4%;
+  padding-right: 4%
+}
+.navbar h3{
+  margin-right: 50px;
+  font-size: 2.4rem;
+  font-weight: bolder
+}
+.navbar .nav-link, #navbarDropdown{
+  font-size: 1.1rem
+}
+.navbar-nav .nav-item.dropdown .dropdown-toggle{
+  color: darkslategray;
+  font-size: 17px
+}
+
+
+div.row{
+  height: 100%;
+}
+.container-fluid .main-row{
+  margin-top: 4%
+}
+
+
+/* table */
+table{
+  text-align: center
+}
+td{
+  font-family: sans;
+}
+
+
+
+/* Logout icon */
+a i{
+  transform: rotateZ(180deg);
+  margin-right: 6% 
+}
+
+
+@font-face {
+  font-family: 'zorus';
+  src: url(~src\assets\bootstrap\fonts\Zorus_Serif_Italic.otf);
+}
+
+.bookswap{
+  font-family: zorus
+}

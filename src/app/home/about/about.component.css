@@ -1,0 +1,36 @@
+
+
+section{
+    padding: 5% 0; 
+    height: 100vh;
+    min-height: 800px;
+    overflow: hidden
+}
+
+
+div.row, div.container{
+    height: 100%;
+}
+
+.bgbook{
+    background-image: url('~src\assets\pexels-photo-590493.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 50%
+
+}
+
+
+h2.text-center{
+    font-family: neosans;
+    margin-bottom: 1.5em
+}
+
+p{
+    font-family: sans;
+    font-size: 1.2em;
+    line-height: 2em;
+    word-spacing: .3em
+}

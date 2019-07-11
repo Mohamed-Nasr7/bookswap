@@ -1,0 +1,210 @@
+
+<section>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom  py-3">
+    <h3 class="bookswap" id="">BookSwap</h3>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active mr-3">
+          <a class="nav-link" routerLink="/admin">لوحة التحكم <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown mr-3">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{adminName}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/admin-logout">تسجيل الخروج  <i class="fa fa-sign-out"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- PAGE BODY -->
+  <div class="container-fluid">
+  
+
+    
+    <div class="row my-4">
+      
+      <!-- SIDE BAR -->
+      <div class="col-md-2 mb-3 sidebar">
+        <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">المستخدمين</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">الكتب</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">الرسائل الواردة</a>
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+      <!-- START OF Users | BOOKS | MESSAGES -->
+
+      <!-- /.col-md-4 -->
+      <div class="col-md-10 px-5 tables">
+        <div class="tab-content" id="myTabContent">
+          
+
+
+      <!-- USERS TABLE -->
+          
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            <div class="card" >
+              <div class="card-header">
+                عدد الأعضاء :  {{users.length}}
+              </div>
+
+              <div class="row">
+         
+         
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                          <table  class="table table-bordered">
+                              
+                              <thead>
+                                <tr>
+                                  <th>البريد الإلكتروني</th>
+                                  <th>الرقم السري</th>
+                                  <th>حذف المستخدم</th>
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                <tr *ngFor="let user of users; let i = index;">
+                                  <td>{{user.email}}</td>
+                                  <td> </td>
+                                  <td>
+                                    <button type="button" class="btn btn-danger" (click)="deleteUser(user,i)">حذف</button>
+                                  </td>
+                                </tr> 
+                              </tbody>
+
+                            </table>
+                        </div>
+                        
+                      </div>
+                </div>
+       
+              </div>
+           </div>
+          
+          </div>
+
+
+
+
+
+
+
+
+
+<!-- BOOKS TABLE -->
+
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            
+            
+            
+              <div class="card" >
+                  <div class="card-header">
+                      عدد الكتب :  {{books.length}}
+                  </div>
+                 <div class="row">
+                   
+                   
+                   <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-12">
+          
+                             <table  class="table table-bordered">
+                                 
+                                <thead>
+                                   <tr>
+                                     <th>اسم الكتاب </th>
+                                     <th> المالك</th>
+                                     <th>حذف الكتاب</th>
+                                   </tr>
+                                </thead>
+          
+                                <tbody>
+                                   <tr *ngFor="let book of books; let i = index">
+                                     <td>{{book.title}}</td>
+                                     <td> </td>
+                                     <td>
+                                       <button type="button" class="btn btn-danger" (click)="deleteBook(book, i)">حذف</button>
+                                     </td>
+                                   </tr> 
+                                </tbody>
+          
+                               </table>
+                          </div>
+                          
+                        </div>
+                   </div>
+                 
+                 </div>
+              </div>
+              
+
+          </div>
+
+
+
+
+
+
+          <!-- Messages -->
+
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+              <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let message of messages; let i = index;" >
+                  <div  class="card h-100">
+      
+                    <div class="card-header">
+                        البريد الإلكتروني: {{message.email}}
+                    </div>
+
+                    <div class="card-body">
+                      <p class="card-text">
+                         نص الرسالة: 
+                      </p>
+                    </div>
+
+                    <div class="card-footer text-center">
+                        <button type="submit" class="btn btn-danger" (click)="deleteMessage(message, i)">حذف</button>
+                    </div>
+                  </div>
+                </div>
+                
+          </div>
+
+        </div>
+      </div>
+      <!-- /.col-md-8 -->
+
+    </div>
+
+  </div>
+<!-- /.container -->
+
+
+</section>
+

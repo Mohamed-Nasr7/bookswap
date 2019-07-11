@@ -1,0 +1,36 @@
+
+section{
+  
+  margin-bottom: 5%
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    font-family: sans;
+    color: black;
+  }
+
+  p.lead{
+    font-weight: bold
+  }
+  
+  .features-icons .features-icons-item {
+    max-width: 20rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+  }
+  
+  .features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+    color: #580B0B
+    
+  }
+  
+  .features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+  }
+  
+  

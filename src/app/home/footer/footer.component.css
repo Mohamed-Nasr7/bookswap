@@ -1,0 +1,22 @@
+
+footer{
+    background-color: #2F2B35;
+    color: white;    
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: sans;
+    font-weight: bold;
+}
+
+.footer i{
+    color: white
+}
+
+.footer i:hover{
+    color: rgb(156, 22, 22)
+}
+
+.footer a{
+    color: white
+}
+
